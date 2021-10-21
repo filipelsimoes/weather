@@ -1,0 +1,49 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.syneliencechallenge'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-cache:2.4.0'
+	implementation 'io.rest-assured:json-schema-validator:4.3.0'
+	implementation 'org.apache.httpcomponents:httpclient'
+	implementation 'org.mockito:mockito-core:3.9.0'
+	implementation 'junit:junit:4.12'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'io.github.openfeign:feign-okhttp:10.11'
+	implementation 'io.github.openfeign:feign-gson:10.11'
+	implementation 'io.github.openfeign:feign-slf4j:10.11'
+//	implementation 'org.springframework.cloud:spring-cloud-dependencies'
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2020.0.4"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

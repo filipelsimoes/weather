@@ -1,0 +1,162 @@
+.header {
+  min-height: 150px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  color: white;
+  background-image: linear-gradient(
+    270deg,
+    rgb(220, 249, 255) 2%,
+    rgb(70, 77, 248) 100%
+  ) !important;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  &--subtitle {
+    font-size: 20px;
+    display: flex;
+    font-family: "Sarabun", sans-serif;
+    @media only screen and (max-width: 768px) {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &--container-title {
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Sarabun", sans-serif;
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+  &--title {
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Sarabun", sans-serif;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &--container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.logo {
+  width: 15rem;
+}
+
+.search {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 3rem;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  &-latitude {
+    width: 20%;
+    margin-right: 2rem;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  &-longitude {
+    width: 20%;
+    margin-right: 2rem;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  &-cnt {
+    margin-bottom: 1rem;
+  }
+}
+
+.container-results-by-city {
+  flex-direction: row;
+  display: flex;
+  margin-left: 5rem;
+  font-family: "Sarabun", sans-serif;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+  }
+}
+
+table,
+th,
+td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+th,
+td {
+  background-color: rgb(220, 249, 255);
+}
+
+.error {
+  color: red;
+  font-family: "Sarabun", sans-serif;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.pagination {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination__item {
+  margin: 0.5rem;
+  list-style: none;
+}
+
+.searchByCoords-buttons {
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+  }
+}
